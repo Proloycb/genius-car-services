@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../Shared/Loading/Loading';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Register = () => {
     const [agree, setAgree] = useState(false);
@@ -39,6 +40,7 @@ const Register = () => {
     }
     return (
         <div className='container w-50 mx-auto mt-5'>
+            <PageTitle title="Register"/>
             <h2 className='text-primary text-center mt-2'>Please Register</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicText">
